@@ -61,3 +61,15 @@
 ![0131](imagesEvidencia1/0131.PNG)
 
 ![0132](imagesEvidencia1/0132.PNG)
+
+Exercise 2 (optional)
+
+![0133](imagesEvidencia1/0133.PNG)
+
+![0134](imagesEvidencia1/0134.PNG)
+
+![0135](imagesEvidencia1/0135.PNG)
+
+![0136](imagesEvidencia1/0136.PNG)
+
+![0137](imagesEvidencia1/0137.PNG)
