@@ -1,0 +1,14 @@
+serviceprincipalname1
+
+{
+  "appId": "d356865b-ab0c-4b09-bdea-c996de0037ae",
+  "displayName": "serviceprincipalname1",
+  "name": "d356865b-ab0c-4b09-bdea-c996de0037ae",
+  "password": "oUeO6yrUpMok9ebOv.O0Gkj1nR8ODMwts0",
+  "tenant": "87ed21aa-c289-44c5-87bd-e55077285059"
+}
+id
+496ef324-53ec-418d-9c91-43616ab1588d
+
+name
+Azure Pass - Sponsorship
