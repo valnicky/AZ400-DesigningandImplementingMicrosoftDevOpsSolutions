@@ -1,0 +1,4 @@
+"Resource Group Name: $resourceGroupName"
+Resource Group Name: az400m13l01-RG
+PS /home/valeria>  "Linked template URI with SAS token: $templateURI"
+Linked template URI with SAS token: https://az400m13blob1570355603.blob.core.windows.net/linktempblobcntr/storage.json?sv=2019-07-07&sr=b&sig=Xln2a3C2OGy3En1nSt1JIzNrDgkTskhhFk2l7C88G6g%3D&se=2021-08-19T11%3A22%3A07Z&sp=r
