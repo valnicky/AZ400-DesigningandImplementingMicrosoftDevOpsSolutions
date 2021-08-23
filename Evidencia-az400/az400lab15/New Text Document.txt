@@ -1,0 +1,22 @@
+
+ name of the logical Azure SQL Database server.
+sql db
+https://portal.azure.com/#@valerycreativedesign.onmicrosoft.com/resource/subscriptions/a6ebd69c-8625-4d4b-98fb-96fc73436555/resourceGroups/az400m1501a-RG/providers/Microsoft.Sql/servers/az400m15sqlsrv3222520236/databases/az400m15sqldb
+sql server
+az400m15sqlsrv3222520236
+
+Registry name
+az400m151acr2736127991
+
+Login server
+az400m151acr2736127991.azurecr.io
+
+Username
+az400m151acr2736127991
+
+password
+BA2vh+CzVanBuGX35C=KLCvkjQ51GEBg
+
+
+CONNECTION_STRING="Data Source=tcp:az400m15sqlsrv$RANDOM$RANDOM.database.windows.net,1433;Initial Catalog=az400m15sqldb;User Id=sqladmin;Password=Pa55w.rd1234;"
+az webapp config connection-string set --name $WEB_APP_NAME --resource-group $RG_NAME --connection-string-type SQLAzure --settings defaultConnection="$CONNECTION_STRING"

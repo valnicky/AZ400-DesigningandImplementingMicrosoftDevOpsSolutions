@@ -1,0 +1,9 @@
+
+app name
+webappsqlvalery
+
+App Service plan
+appservicevalery
+
+APPINSIGHTS_INSTRUMENTATIONKEY
+315ca692-579f-4781-acbd-2e095535a222
