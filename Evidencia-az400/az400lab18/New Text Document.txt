@@ -1,0 +1,3 @@
+@Azure Pipelines subscribe https://dev.azure.com/valnickyTrainingAzure1liveid2530565/18%20Tailwind%20Traders/_build?definitionId=25
+
+@Azure Pipelines subscribe https://dev.azure.com/valnickyTrainingAzure1/18%20Tailwind%20Traders/_release?_a=releases&view=mine&definitionId=2
