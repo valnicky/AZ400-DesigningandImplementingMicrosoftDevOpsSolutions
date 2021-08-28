@@ -24,3 +24,5 @@ In this exercise, you will deploy, configure, and manage Azure VMs by using Ansi
 ###Task 1: Provision an Azure VM serving as the Ansible control node
 
 ![1401](imagesEvidencia14/1401.PNG)
+
+![1402](imagesEvidencia14/1402.PNG)
