@@ -84,3 +84,13 @@ we will create Azure resources using Terraform as part of our deployment pipelin
 ![1433](imagesEvidencia14/1433.PNG)
 
 ![1434](imagesEvidencia14/1434.PNG)
+
+![1435](imagesEvidencia14/1435.PNG)
+
+![1436](imagesEvidencia14/1436.PNG)
+
+![1437](imagesEvidencia14/1437.PNG)
+
+![1438](imagesEvidencia14/1438.PNG)
+
+![1439](imagesEvidencia14/1439.PNG)
