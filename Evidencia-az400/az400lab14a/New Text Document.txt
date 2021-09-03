@@ -1,2 +1,11 @@
-publicIpAddress
-20.101.137.189
+Pa55w.rd1234
+
+
+ssh azureuser@20.105.159.115
+ "publicIpAddress": "20.105.159.115",
+vmnamevalery
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2XMqp7ZtCKerLrSRjjT1+NXOtHPEqiboppNacaP3FNjaSPz+9oGCu634E1rel6Qt8u6OdNSYHB5r5Mij2eD1OMuypXgJjrrw3X1oQ9KsgQB5fys4M5JyZ/Ng4gwl/pm342twlKTWzda8PqmAhL0vXe5mc+h+JTfK9j5GE2Gqy708uNL8ZNCRBCgm14UC5vHHxmu/MJ3PbJuvNQuiVVrLQWsDKWOWNhede4dqXrRv4SR5wPzds3JCQ4R2zNw3Kv86QZg65Emgi34VtFf85dZscXMak8f9sUuBunEZlswWLrUEA6dlhIeboivqhOEsERCFhg7EPmxiK/vYo930VkTjX azureuser@az400m1403vm1
+
+sudo ansible-playbook ~/PartsUnlimitedMRP/Labfiles/AZ-400T05-ImplemntgAppInfra/Labfiles/ansible/new_vm_web.yml --extra-vars "vmname=vmnamevalery resgrp=az400m14l03arg vnet=az400m1403aVNET subnet=az400m1403aSubnet"
+
+sudo ansible-playbook --user azureuser --private-key=/home/azureuser/.ssh/id_rsa -i ./myazure_rm.yml ~/PartsUnlimitedMRP/Labfiles/AZ-400T05-ImplemntgAppInfra/Labfiles/ansible/httpd.yml --extra-vars "vmname=vmnamevalery*"
