@@ -127,3 +127,19 @@ Once the download of the DacFramework.msi file completes, use it to run the inst
 ![1106](imagesEvidencia11/1106.PNG)
 
 ![1107](imagesEvidencia11/1107.PNG)
+
+![1108](imagesEvidencia11/1108.PNG)
+
+![1109](imagesEvidencia11/1109.PNG)
+
+![1110](imagesEvidencia11/1110.PNG)
+
+![1111](imagesEvidencia11/1111.PNG)
+
+![1112](imagesEvidencia11/1112.PNG)
+
+![1113](imagesEvidencia11/1113.PNG)
+
+![1114](imagesEvidencia11/1114.PNG)
+
+![1115](imagesEvidencia11/1115.PNG)
