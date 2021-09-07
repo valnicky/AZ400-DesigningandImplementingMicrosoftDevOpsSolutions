@@ -1,12 +1,15 @@
 ACRNAME 
-az400m16acr29165236
+
 the name of the login server of the Azure Container registry
 az400m16acr29165236.azurecr.io
 
-SQLNAME='az400m16sql'$RANDOM$RANDOM
-az400m16sql240028597
+
+
 the name of logical server hosting the Azure SQL database
 az400m16sql240028597.database.windows.net
 
 
 RGNAME=az400m16l01a-RG
+
+external IP
+20.103.0.214
