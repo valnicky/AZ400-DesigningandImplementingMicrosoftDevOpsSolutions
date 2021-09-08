@@ -143,3 +143,125 @@ Once the download of the DacFramework.msi file completes, use it to run the inst
 ![1114](imagesEvidencia11/1114.PNG)
 
 ![1115](imagesEvidencia11/1115.PNG)
+
+![1116](imagesEvidencia11/1116.PNG)
+
+![1117](imagesEvidencia11/1117.PNG)
+
+![1118](imagesEvidencia11/1118.PNG)
+
+![1119](imagesEvidencia11/1119.PNG)
+
+![1120](imagesEvidencia11/1120.PNG)
+
+![1121](imagesEvidencia11/1121.PNG)
+
+![1122](imagesEvidencia11/1122.PNG)
+
+![1123](imagesEvidencia11/1123.PNG)
+
+![1124](imagesEvidencia11/1124.PNG)
+
+![1125](imagesEvidencia11/1125.PNG)
+
+![1126](imagesEvidencia11/1126.PNG)
+
+![1127](imagesEvidencia11/1127.PNG)
+
+![1128](imagesEvidencia11/1128.PNG)
+
+![1129](imagesEvidencia11/1129.PNG)
+
+![1130](imagesEvidencia11/1130.PNG)
+
+![1131](imagesEvidencia11/1131.PNG)
+
+![1132](imagesEvidencia11/1132.PNG)
+
+###Task 2: Configure a release pipeline
+In this task, you will configure the release pipeline.
+
+Note: The Azure VM has the agent configured to deploy the applications and run Selenium testcases. The release definition uses Phases to deploy to target servers.
+
+Within the Remote Desktop session to az40011bvm, in the browser window displaying the Azure DevOps portal, click the Azure DevOps symbol in the upper left corner.
+On the pane displaying your organization projects, click the tile representing the Setting Up and Running Functional Tests project.
+On the Setting Up and Running Functional Tests pane, in the vertical navigational pane, select Pipelines, within the Pipelines section, click Releases and then, on the Selenium pane, click Edit.
+On the All pipelines > Selenium pane, click the Tasks tab header and, in the dropdown menu, click Dev.
+Within the list of tasks of the Dev stage, review the IIS Deployment, SQL Deployment, and Selenium test execution deployment phases.
+IIS Deployment phase: In this phase, we deploy application to the VM using the following tasks:
+
+IIS Web App Manage: This task runs on the target machine where we registered agent. It creates a website and an Application Pool locally with the name PartsUnlimited running under the port 82 , http://localhost:82
+IIS Web App Deploy: This task deploys the application to the IIS server using Web Deploy.
+Database deploy phase: In this phase, we use SQL Server Database Deploy task to deploy dacpac file to the DB server.
+
+Selenium tests execution: Executing UI testing as part of the release process allows us to detect unexpected changes. Setting up automated browser based testing drives quality in your application, without having to do it manually. In this phase, we will execute Selenium tests on the deployed web application. The subsequent tasks describe using Selenium to test the websites in the release pipeline.
+
+Visual Studio Test Platform Installer: The Visual Studio Test Platform Installer task will acquire the Microsoft test platform from nuget.org or a specified feed, and add it to the tools cache. It satisfies the vstest requirements so any subsequent Visual Studio Test task in a build or release pipeline can run without needing a full Visual Studio install on the agent machine.
+Run Selenium UI tests: This task uses vstest.console.exe to execute the selenium testcases on the agent machines.
+On the All pipelines > Selenium pane, click the IIS Deployment phase and, on the Agent job pane, verify that the Default Agent pool is selected.
+Repeat the previous step for SQL Deployment and the Selenium tests execution phases. If needed, click Save to save the changes.
+
+![1133](imagesEvidencia11/1133.PNG)
+
+![1134](imagesEvidencia11/1134.PNG)
+
+![1135](imagesEvidencia11/1135.PNG)
+
+###Task 3: Trigger Build and Release
+In this task, we will trigger the Build to compile Selenium C# scripts along with the Web application. The resulting binaries are copied to self-hosted agent and the Selenium scripts are executed as part of the automated Release.
+
+Within the Remote Desktop session to az40011bvm, in the browser window displaying the Azure DevOps portal, in the vertical navigational pane, in the Pipelines section, click Pipelines and then, on the Pipelines pane, click Selenium.
+On the Selenium pane, click Run pipeline and, on the Run pipeline, click Run.
+
+Note: This build will publish the test artifacts to Azure DevOps, which will be used in release.
+
+Note: Once the build is successful, release will be triggered.
+
+On the pipeline runs pane, in the Jobs section, click Phase 1 and monitor the build progress until its completion.
+In the browser window displaying the Azure DevOps portal, in the vertical navigational pane, in the Pipelines section, click Releases, click the entry representing the release, and, on the Selenium > Release-1 pane, click Dev.
+On the Selenium > Release-1 > Dev pane, monitor the corresponding deployment.
+Once the Selenium test execution phase starts, monitor the web browser tests.
+Once the release completes, on the Selenium > Release-1 > Dev pane, click on the Tests tab to analyze the test results. Select the required filters from the dropdown in Outcome section to view the tests and their status.
+
+![1136](imagesEvidencia11/1136.PNG)
+
+![1137](imagesEvidencia11/1137.PNG)
+
+![1138](imagesEvidencia11/1138.PNG)
+
+![1139](imagesEvidencia11/1139.PNG)
+
+![1140](imagesEvidencia11/1140.PNG)
+
+![1141](imagesEvidencia11/1141.PNG)
+
+![1142](imagesEvidencia11/1142.PNG)
+
+![1143](imagesEvidencia11/1143.PNG)
+
+![1144](imagesEvidencia11/1144.PNG)
+
+![1145](imagesEvidencia11/1145.PNG)
+
+![1146](imagesEvidencia11/1146.PNG)
+
+##Exercise 2: Remove the Azure lab resources
+In this exercise, you will remove the Azure resources provisione in this lab to eliminate unexpected charges.
+
+Note: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+
+Task 1: Remove the Azure lab resources
+In this task, you will use Azure Cloud Shell to remove the Azure resources provisioned in this lab to eliminate unnecessary charges.
+
+In the Azure portal, open the Bash shell session within the Cloud Shell pane.
+List all resource groups created throughout the labs of this module by running the following command:
+
+Shell
+az group list --query "[?starts_with(name,'az400m11l02-RG')].name" --output tsv
+Delete all resource groups you created throughout the labs of this module by running the following command:
+
+Shell
+az group list --query "[?starts_with(name,'az400m11l02-RG')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+Note: The command executes asynchronously (as determined by the –nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+
+![1147](imagesEvidencia11/1147.PNG)
