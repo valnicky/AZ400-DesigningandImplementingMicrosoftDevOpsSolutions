@@ -1,0 +1,7 @@
+73k52bpar77ke64rl7rlwxou4eyrxtblhzdp4cwhkqoob2lai6wq
+
+https://vsrm.dev.azure.com/valnickyTrainingAzure1/10-CreatingReleaseDashboard/_apis/release/releases?api-version=6.0
+
+https://vsrm.dev.azure.com/valnickyTrainingAzure1/10-CreatingReleaseDashboard/_apis/release/deployments?api-version=6.0
+
+https://vsrm.dev.azure.com/valnickyTrainingAzure1/10-CreatingReleaseDashboard/_apis/release/deployments?DeploymentStatus=failed&api-version=6.0
