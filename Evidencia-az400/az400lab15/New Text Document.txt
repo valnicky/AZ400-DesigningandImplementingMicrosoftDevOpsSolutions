@@ -1,27 +1,23 @@
-RG_NAME='az400m1501a-RG'
-ACR_NAME=az400m151acr$RANDOM$RANDOM
-APP_SVC_PLAN='az400m1501a-app-svc-plan'
-WEB_APP_NAME=az400m151web$RANDOM$RANDOM
-SQLDB_SRV_NAME=az400m15sqlsrv$RANDOM$RANDOM
-SQLDB_NAME='az400m15sqldb'
+
+ RG_NAME='az400m1501a-RG'
+ ACR_NAME=az400m151acr$RANDOM$RANDOM
+ APP_SVC_PLAN='az400m1501a-app-svc-plan'
+ WEB_APP_NAME=az400m151web$RANDOM$RANDOM
+ SQLDB_SRV_NAME=az400m15sqlsrv$RANDOM$RANDOM
+ SQLDB_NAME='az400m15sqldb'
+ az group create --name $RG_NAME --location $LOCATION
+
+$SQLDB_SRV_NAME  az400m15sqlsrv1907413530.database.windows.net
+ $SQLDB_NAME   az400m15sqldb1907413530
 
 
-CONNECTION_STRING="Data Source=tcp:$az400m15sqlsrv1318080.database.windows.net,1433;Initial Catalog=$az400m15sqldb1318080;User Id=sqladmin;Password=Pa55w.rd1234;"
+CONNECTION_STRING="Data Source=tcp:az400m15sqlsrv1907413530.database.windows.net,1433;Initial Catalog=az400m15sqldb1907413530;User Id=sqladmin;Password=Pa55w.rd1234;"
 az webapp config connection-string set --name $WEB_APP_NAME --resource-group $RG_NAME --connection-string-type SQLAzure --settings defaultConnection="$CONNECTION_STRING"
 
-SQLDB_NAME
-az400m15sqldb1318080
+ "value": "Data Source=tcp:az400m15sqlsrv1907413530.database.windows.net,1433;Initial Catalog=az400m15sqldb1907413530;User Id=sqladmin;Password=Pa55w.rd1234;"
 
-SQLDB_SRV_NAME
-sql server ddbb:
-az400m15sqlsrv1318080.database.windows.net
+Registry name,   az400m151acr3190528059
+ Login server,  az400m151acr3190528059.azurecr.io
+Admin user,   az400m151acr3190528059
+and password entries.   +BPQzL4yFPmk5PHpCfKUcJ381eZs17WR
 
-User Id=sqladmin;Password=Pa55w.rd123
-
-login server
- "loginServer": "az400m151acr492915517.azurecr.io"
-
-Registry name, az400m151acr492915517
-Login server, az400m151acr492915517.azurecr.io
- Admin user, az400m151acr492915517
-and password  fCrd0vF+NxC=YRzr6zwcWgsMktYGS6TU
